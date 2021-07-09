@@ -1,0 +1,41 @@
+#sidebar, #header-public, #footer-public{
+    background: rgba(39,100,156,1);
+    background: -moz-linear-gradient(-45deg, rgba(39,100,156,1) 0%, rgba(18,88,163,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(39,100,156,1)), color-stop(100%, rgba(18,88,163,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(39,100,156,1) 0%, rgba(18,88,163,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(39,100,156,1) 0%, rgba(18,88,163,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(39,100,156,1) 0%, rgba(18,88,163,1) 100%);
+    background: linear-gradient(135deg, rgba(39,100,156,1) 0%, rgba(18,88,163,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27649c', endColorstr='#1258a3', GradientType=1 );
+
+    color: white !important;
+}
+
+#sidebar a, #header-public a, #footer-public a{
+    color: white !important;
+}
+
+nav .active{
+    font-weight: bold;
+}
+
+nav .active::after{
+    content: "*";
+}
+
+#header-public, #footer-public{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.carousel .carousel-item {
+    height: 800px;
+}
+  
+.carousel-item img {
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    min-height: 800px;
+}

@@ -1,0 +1,19 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^([A-Za-z0-9-]+)?$ Index.php?controller=$1 [QSA,L] #Index Directo no tiene accion
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/edit Index.php?controller=$1&action=edit&id=$2 [QSA,L] #vista de edicion 
+RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/create Index.php?controller=$1&action=edit&id=$2 [QSA,L] #vista de creacion 
+RewriteRule ^([A-Za-z0-9-]+)/store Index.php?controller=$1&action=store [QSA,L] #Almacena el dato en la base
+
+RewriteRule ^Usuarios/Login Index.php?controller=Usuarios&action=loginForm [QSA,L] #Muestra form de inicio de seccion
+RewriteRule ^Usuarios/validate Index.php?controller=Usuarios&action=validate [QSA,L] #Validar la seccion ingresada
+RewriteRule ^Usuarios/Close Index.php?controller=Usuarios&action=close [QSA,L] #Cerrar una seccion
+
+RewriteRule ^Inicio/Publico Index.php?controller=Inicio&action=Publico [QSA,L] #Muestra Ventana Publica
+
+RewriteRule ^Pedidos/([A-Za-z0-9-]+)/print Index.php?controller=Pedidos&action=print&id=$1 [QSA,L] #Imprimir ticket
+
+RewriteRule ^Pedidos/([A-Za-z0-9-]+)/takeOut Index.php?controller=Pedidos&action=takeOut [QSA,L] #Retiro de un pedido
+RewriteRule ^Pedidos/take Index.php?controller=Pedidos&action=take [QSA,L] #Guardar retiro
+
+RewriteRule ^Envios/([A-Za-z0-9-]+)/delete Index.php?controller=Envios&action=delete&id=$1 [QSA,L] #Eliminar un envio
