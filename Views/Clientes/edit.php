@@ -7,7 +7,7 @@
 
             <div class="form-group">
                 <label>Cedula de Identidad:</label>
-                <input type="number" class="form-control" name="documento" >
+                <input type="number" class="form-control" name="documento" required>
             </div>
             <div class="form-group">
                 <label>Digito Verificador:</label>
@@ -15,11 +15,11 @@
             </div>
             <div class="form-group">
                 <label>Nombres:</label>
-                <input type="text" class="form-control" name="nombres">
+                <input type="text" class="form-control" name="nombres" required>
             </div>
             <div class="form-group">
                 <label>Apellidos:</label>
-                <input type="text" class="form-control" name="apellidos">
+                <input type="text" class="form-control" name="apellidos" required>
             </div>
             <div class="form-group">
                 <label>Correo:</label>

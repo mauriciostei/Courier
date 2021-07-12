@@ -14,7 +14,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Cedula Cliente:</label>
-                            <input type="number" class="form-control" id="cliente">
+                            <input type="number" class="form-control" id="cliente" required>
                             <input type="hidden" name="Clientes_id" id="clienteId">
                             <span id="clienteInfo"></span>
                         </div>

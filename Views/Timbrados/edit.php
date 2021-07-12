@@ -33,13 +33,13 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Timbrado:</label>
-                            <input type="number" class="form-control" value="<?php echo $Timbrado->Timbrado; ?>" name="timbrado">
+                            <input type="number" class="form-control" value="<?php echo $Timbrado->Timbrado; ?>" name="timbrado" required>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label>Expedicion:</label>
-                            <input type="text" class="form-control" value="<?php echo $Timbrado->Expedicion; ?>" name="expedicion">
+                            <input type="text" class="form-control" value="<?php echo $Timbrado->Expedicion; ?>" name="expedicion" required>
                         </div>
                     </div>
                 </div>
@@ -48,13 +48,13 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Inicio de la Vigencia:</label>
-                            <input type="date" class="form-control" value="<?php echo $Timbrado->InicioVigencia; ?>" name="IniVigencia">
+                            <input type="date" class="form-control" value="<?php echo $Timbrado->InicioVigencia; ?>" name="IniVigencia" required>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label>Fin de la Vigencia:</label>
-                            <input type="date" class="form-control" value="<?php echo $Timbrado->FinVigencia; ?>" name="FinVigencia">
+                            <input type="date" class="form-control" value="<?php echo $Timbrado->FinVigencia; ?>" name="FinVigencia" required>
                         </div>
                     </div>
                 </div>
@@ -63,13 +63,13 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Inicio de la Factura:</label>
-                            <input type="number" class="form-control" value="<?php echo $Timbrado->InicialFac; ?>" name="IniFac">
+                            <input type="number" class="form-control" value="<?php echo $Timbrado->InicialFac; ?>" name="IniFac" required>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label>Fin de la Factura:</label>
-                            <input type="number" class="form-control" value="<?php echo $Timbrado->FinFac; ?>" name="FinFac">
+                            <input type="number" class="form-control" value="<?php echo $Timbrado->FinFac; ?>" name="FinFac" required>
                         </div>
                     </div>
                     <div class="col">

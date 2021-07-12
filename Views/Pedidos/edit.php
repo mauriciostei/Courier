@@ -17,7 +17,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Timbrado:</label>
-                            <select name="Timbrados_id" class="form-control">
+                            <select name="Timbrados_id" class="form-control" required>
                                 <?php foreach($Timbrado->findBySucursal( unserialize($_SESSION["user_id"])->Sucursales_id ) as $r): ?>
                                     <option value="<?php echo $r->id; ?>"> <?php echo $r->Timbrado; ?> </option>
                                 <?php endforeach; ?>
@@ -30,7 +30,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Cedula Cliente:</label>
-                            <input type="number" class="form-control" id="cliente">
+                            <input type="number" class="form-control" id="cliente" required>
                             <input type="hidden" name="Clientes_id" id="clienteId">
                             <span id="clienteInfo"></span>
                         </div>

@@ -23,7 +23,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Nombre:</label>
-                            <input type="text" class="form-control" name="nombre" value="<?php echo $Sucursal->Nombre; ?>">
+                            <input type="text" class="form-control" name="nombre" value="<?php echo $Sucursal->Nombre; ?>" required>
                         </div>
                     </div>
                     <div class="col">
@@ -42,7 +42,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Direccion:</label>
-                            <input type="text" class="form-control" name="direccion" value="<?php echo $Sucursal->Direccion; ?>">
+                            <input type="text" class="form-control" name="direccion" value="<?php echo $Sucursal->Direccion; ?>" required>
                         </div>
                     </div>
                 </div>

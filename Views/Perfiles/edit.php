@@ -23,7 +23,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Nombre:</label>
-                            <input type="text" class="form-control" name="nombre" value="<?php echo $Perfil->Nombre; ?>">
+                            <input type="text" class="form-control" name="nombre" value="<?php echo $Perfil->Nombre; ?>" required>
                         </div>
                     </div>
                 </div>

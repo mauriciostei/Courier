@@ -27,10 +27,10 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" class="form-control" name="nombre" value="<?php echo $Usuario->Nombre; ?>">
+                                    <input type="text" class="form-control" name="nombre" value="<?php echo $Usuario->Nombre; ?>" required>
                                 </div>
                                 <div class="col">
-                                    <input type="text" class="form-control" name="apellido" value="<?php echo $Usuario->Apellido; ?>">
+                                    <input type="text" class="form-control" name="apellido" value="<?php echo $Usuario->Apellido; ?>" required>
                                 </div>
                             </div>
                         </div>
@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="col">
                         <label>Usuario del Sistema:</label>
-                        <input type="text" class="form-control" name="user" value="<?php echo $Usuario->User; ?>">
+                        <input type="text" class="form-control" name="user" value="<?php echo $Usuario->User; ?>" required>
                     </div>
                     <div class="col">
                         <div class="form-group">
@@ -117,14 +117,14 @@
             <div class="row">
                 <div class="col">
                     <label>Contraseña Nueva:</label>
-                    <input type="password" name="password" min=6 class="form-control" placeholder="Ingrese la nueva contraseña" <?php echo $Usuario->id==0 ? 'disabled' :''; ?>>
+                    <input type="password" name="password" min=6 class="form-control" placeholder="Ingrese la nueva contraseña" <?php echo $Usuario->id==0 ? 'disabled' :''; ?> required>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col">
                     <label>Repita Contraseña Nueva:</label>
-                    <input type="password" class="form-control" min=6 placeholder="Ingrese de nuevo la contraseña" <?php echo $Usuario->id==0 ? 'disabled' :''; ?>>
+                    <input type="password" class="form-control" min=6 placeholder="Ingrese de nuevo la contraseña" <?php echo $Usuario->id==0 ? 'disabled' :''; ?> required>
                 </div>
             </div>
 

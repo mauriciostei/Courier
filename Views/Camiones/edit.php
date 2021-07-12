@@ -23,13 +23,13 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Nombre:</label>
-                            <input type="text" class="form-control" name="nombre" value="<?php echo $Camion->Nombre; ?>">
+                            <input type="text" class="form-control" name="nombre" value="<?php echo $Camion->Nombre; ?>" required>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-group">
                             <label>Sucursal:</label>
-                            <select name="Sucursales_id" class="form-control">
+                            <select name="Sucursales_id" class="form-control" required>
                                 <?php foreach($Sucursales->list() as $r): ?>
                                     <option value="<?php echo $r->id; ?>" <?php echo $r->id==$Camion->Sucursales_id ? 'selected' : ''; ?> > <?php echo $r->Nombre; ?> </option>
                                 <?php endforeach; ?>

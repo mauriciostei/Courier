@@ -23,7 +23,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Nombre:</label>
-                            <input type="text" class="form-control" name="nombre" value="<?php echo $Rutas->Nombre; ?>">
+                            <input type="text" class="form-control" name="nombre" value="<?php echo $Rutas->Nombre; ?>" required>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Horas:</label>
-                            <input type="number" class="form-control" name="horas" value="<?php echo $Rutas->Horas; ?>" >
+                            <input type="number" class="form-control" name="horas" id="horasCab" value="<?php echo $Rutas->Horas; ?>" disabled required>
                         </div>
                     </div>
                     <div class="col">
@@ -123,7 +123,7 @@ $(document).ready(function(){
         var content = '<tr>';
         content = content + '<input type="hidden" name="idDet[]" value="0">';
         content = content + '<td><input type="text" class="form-control" name="nomDet[]" placeholder="Nombre de punto de control"></td>';
-        content = content + '<td><input type="number" class="form-control" name="horasDet[]" placeholder="Horas para punto de control"></td>';
+        content = content + '<td><input type="number" onchange="changeHours()" class="form-control" name="horasDet[]" placeholder="Horas para punto de control" value="0"></td>';
         content = content + '<td><i class="bi bi-trash removeLine"></i></td>';
         content = content + '</tr>';
 		$("#tablaBase").append(content);
@@ -134,5 +134,16 @@ $(document).ready(function(){
 
     $("#btnAddRow").click();
 });
+
+function changeHours(){
+    var subTotal = 0;
+    $('#tablaBase tr').each(function() {
+        var horas = $(this).find("td").eq(1).find("input").val();
+
+        subTotal = subTotal + parseInt(horas, 10);
+    });
+
+    $("#horasCab").val(subTotal);
+}
 
 </script>

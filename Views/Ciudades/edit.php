@@ -13,7 +13,7 @@
             </div>
             <div class="form-group">
                 <label>Nombre:</label>
-                <input type="text" class="form-control" name="nombre" value="<?php echo $Ciudad->Nombre; ?>">
+                <input type="text" class="form-control" name="nombre" value="<?php echo $Ciudad->Nombre; ?>" required>
             </div>
             <div class="form-group">
                 <label>Activo:</label>

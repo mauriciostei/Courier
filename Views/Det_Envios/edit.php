@@ -57,11 +57,11 @@
             <div class="card-body">
                 <div class="form-group">
                     <label>Observacion del retraso:</label>
-                    <input type="text" class="form-control" name="nombre">
+                    <input type="text" class="form-control" name="nombre" required>
                 </div>
                 <div class="form-group">
                     <label>Tiempo Aprox del retraso:</label>
-                    <input type="number" class="form-control" name="hora">
+                    <input type="number" class="form-control" name="hora" required>
                 </div>
 
                 <input type="submit" value="Guardar" class="form-control btn btn-primary btn-outline-primary">

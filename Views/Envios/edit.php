@@ -23,7 +23,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Ruta:</label>
-                            <select name="Rutas_id" class="form-control">
+                            <select name="Rutas_id" class="form-control" required>
                                 <option value="" disabled <?php echo 0==$Envio->Rutas_id ? 'selected' : ''; ?>>Seleccione Ruta</option>
                                 <?php foreach($Ruta->list() as $r): ?>
                                     <option value="<?php echo $r->id; ?>" <?php echo $r->id==$Envio->Rutas_id ? 'selected' : ''; ?> > <?php echo $r->Nombre; ?> </option>
@@ -52,7 +52,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Salida Estimada:</label>
-                            <input type="datetime-local" class="form-control" name="SalidaEstimada" value="<?php echo $Envio->SalidaEstimada; ?>" >
+                            <input type="datetime-local" class="form-control" name="SalidaEstimada" value="<?php echo $Envio->SalidaEstimada; ?>"  required>
                         </div>
                     </div>
                     <div class="col">
