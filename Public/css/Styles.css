@@ -1,3 +1,7 @@
+body, input, select, option{
+    font-size: 11px !important;
+}
+
 #sidebar, #header-public, #footer-public{
     background: rgba(39,100,156,1);
     background: -moz-linear-gradient(-45deg, rgba(39,100,156,1) 0%, rgba(18,88,163,1) 100%);

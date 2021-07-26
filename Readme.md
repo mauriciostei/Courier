@@ -2,9 +2,8 @@
 
 Aplicacion de courier desarrollada como parte de la tesis de Fatima Vega.
 
-======
+## Modulos Incluidos
 
-### Modulos Incluidos
 -	Versión desktop (Web interna):
     -	Mantenimiento y gestión de usuarios del sistema.
     -	Mantenimiento y gestión de perfiles del sistema.

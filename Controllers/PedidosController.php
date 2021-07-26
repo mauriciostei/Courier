@@ -46,7 +46,6 @@ class PedidosController implements BaseController{
     }
 
     function take(){
-
         foreach($_REQUEST['det_pedido'] as $r):
             $det_ped = new Det_Pedido();
             $det_ped = $det_ped->findById($r);

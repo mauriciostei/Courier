@@ -28,7 +28,7 @@ class TemplateManager{
         , 'Pedidos/edit' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Pedidos/print' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Pedidos/takeOut' => 'Views/Templates/Web/AdminTemplate.php'
-        //, 'Clientes/list' => 'Views/Templates/Web/AdminTemplate.php'
+        , 'Clientes/list' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Clientes/edit' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Envios/list' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Envios/edit' => 'Views/Templates/Web/AdminTemplate.php'
