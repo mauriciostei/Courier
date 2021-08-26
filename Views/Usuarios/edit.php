@@ -54,6 +54,15 @@
                     </div>
                     <div class="col">
                         <div class="form-group">
+                            <label>Contraseña:</label>
+                            <input type="password" class="form-control" name="password" value="<?php echo $Usuario->Password; ?>">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
                             <label>Activo:</label>
                             <input type="hidden" name="active" value="<?php echo $Usuario->Active; ?>">
                             <input type="checkbox" class="" name="activeCheck" <?php echo $Usuario->Active==1 ? 'checked' : ''; ?>>
@@ -62,7 +71,6 @@
                 </div>
 
                 <br>
-                <input type="hidden" name="password" value="<?php echo $Usuario->Password; ?>">
                 <input type="submit" value="Guardar" class="form-control btn btn-primary btn-outline-primary">
 
             </div>

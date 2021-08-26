@@ -153,7 +153,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Codigo de Envio:</label>
-                            <input type="number" class="form-control" placeholder="Ingrese su codigo de paquete" name="pedido" value="<?php echo $_REQUEST["pedido"]; ?>" required>
+                            <input type="number" class="form-control" placeholder="Ingrese su codigo de paquete" name="pedido" required value="<?php echo @$_REQUEST["pedido"]; ?>">
                         </div>
                     </div>
                 </div>
@@ -173,6 +173,7 @@
                     <th>Origen</th>
                     <th>Destino</th>
                     <th>Estado</th>
+                    <th>Hora Llegada</th>
                 </thead>
                 <tbody>
                     <?php echo $content; ?>

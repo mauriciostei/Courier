@@ -60,7 +60,7 @@
                     <div class="col">
                         <div class="form-group">
                             <label>Horas:</label>
-                            <input type="number" class="form-control" name="horas" id="horasCab" value="<?php echo $Rutas->Horas; ?>" disabled required>
+                            <input type="number" class="form-control" name="horas" id="horasCab" value="<?php echo $Rutas->Horas; ?>" readonly required>
                         </div>
                     </div>
                     <div class="col">

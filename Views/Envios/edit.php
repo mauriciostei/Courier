@@ -137,6 +137,7 @@ $(document).ready(function(){
                     case '22':  productType = 'Refrigeración'; break;
                     case '23':  productType = 'Herramientas manuales o electrónicas '; break;
                     case '24':  productType = 'Medicina.'; break;
+                    case '25':  productType = 'Vestimenta.'; break;
                 }
 
                 content = content + "<tr>";

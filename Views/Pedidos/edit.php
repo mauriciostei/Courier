@@ -2,7 +2,7 @@
 <form action="../store" method="POST" onsubmit="return confirm('Seguro de guardar los cambios?');">
 
 <div class="row">
-    <div class="col col-lg-4">
+    <div class="col col-lg-2">
 
         <div class="card">
             <div class="card-header">
@@ -55,7 +55,7 @@
 
     </div>
 
-    <div class="col col-lg-8">
+    <div class="col col-lg-10">
         <div class="card">
             <div class="card-header">
                 <h5 class="card-title">Paquetes</h5>
@@ -75,7 +75,7 @@
                             <th>Ancho:</th>
                             <th>Profundidad:</th>
                             <th>Tipo Producto:</th>
-                            <th>Observacion:</th>
+                            <th>Caracteristica:</th>
                             <th>Precio</th>
                             <th></th>
                         </thead>
@@ -100,7 +100,7 @@ $(document).ready(function(){
 	$("#btnAddRow").click(function(){
         var content = '<tr>';
         content = content + '<td><select name="sucursalesDet[]" class="form-control">  <?php foreach($Sucursal->list() as $r): ?> <option value="<?php echo $r->id; ?>"> <?php echo $r->Nombre; ?> </option> <?php endforeach; ?> </select></td>';
-        content = content + '<td><select name="clientesDet[]" class="form-control">  <?php foreach($Cliente->list() as $r): ?> <option value="<?php echo $r->id; ?>"> <?php echo $r->Nombres; ?> </option> <?php endforeach; ?> </select></td>';
+        content = content + '<td><select name="clientesDet[]" class="form-control">  <?php foreach($Cliente->list() as $r): ?> <option value="<?php echo $r->id; ?>"> <?php echo $r->Nombres.", ".$r->Apellidos; ?> </option> <?php endforeach; ?> </select></td>';
         content = content + '<td><input type="number" step="0.01" onchange="changeText()" class="form-control" name="pesoDet[]" placeholder="Peso"></td>';
         content = content + '<td><input type="number" step="0.01" onchange="changeText()" class="form-control" name="altoDet[]" placeholder="Alto"></td>';
         content = content + '<td><input type="number" step="0.01" onchange="changeText()" class="form-control" name="anchoDet[]" placeholder="Ancho"></td>';
@@ -130,6 +130,7 @@ $(document).ready(function(){
             content = content + '<option value=22>Refrigeración</option>';
             content = content + '<option value=23>Herramientas manuales o electrónicas </option>';
             content = content + '<option value=24>Medicina.</option>';
+            content = content + '<option value=25>Vestimenta.</option>';
         content = content + '</select></td>';
         content = content + '<td><input type="text" class="form-control" name="obsDet[]" placeholder="Observacion"></td>';
         content = content + '<td><input type="number" class="form-control" name="montoDet[]" readonly></td>';

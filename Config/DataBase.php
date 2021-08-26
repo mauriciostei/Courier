@@ -80,6 +80,12 @@ class DataBase{
             when dp.Estado=3 then 'Paquete listo para retiro'
             when dp.Estado=4 then 'Paquete Retirado'
         END Estado
+        , case 
+      		when dp.Estado=2 AND ev.Estado=2 then (ev.SalidaReal + INTERVAL (SELECT SUM(Hora) FROM det_envio WHERE envios_id=ev.id) HOUR)
+      		when dp.Estado=3 then ev.LlegadaReal
+            when dp.Estado=4 then ev.LlegadaReal
+            ELSE ev.LlegadaEstimada
+        END Llegada
         FROM pedidos p
             JOIN det_pedido dp ON dp.Pedidos_id=p.id
             JOIN existencias e ON e.det_pedido_id=dp.id

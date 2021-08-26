@@ -16,6 +16,7 @@ if(isset($_REQUEST["pedido"])){
             <td>".$r['Origen']."</td>
             <td>".$r['Destino']."</td>
             <td>".$r['Estado']."</td>
+            <td>".$r['Llegada']."</td>
         </tr>";
 
     endforeach;

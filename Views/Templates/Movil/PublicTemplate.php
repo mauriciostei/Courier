@@ -172,6 +172,7 @@
                     <th>Origen</th>
                     <th>Destino</th>
                     <th>Estado</th>
+                    <th>Hora Llegada</th>
                 </thead>
                 <tbody>
                     <?php echo $content; ?>

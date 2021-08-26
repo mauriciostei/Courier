@@ -16,7 +16,7 @@
                             <label>Cedula Cliente:</label>
                             <input type="number" class="form-control" id="cliente" required>
                             <input type="hidden" name="Clientes_id" id="clienteId">
-                            <span id="clienteInfo"></span>
+                            <span id="clienteInfo" style="font-size:16px;"></span>
                         </div>
                     </div>
                 </div>
@@ -113,6 +113,7 @@ $("#cliente").on('change', function(){
                 case '22':  productType = 'Refrigeración'; break;
                 case '23':  productType = 'Herramientas manuales o electrónicas '; break;
                 case '24':  productType = 'Medicina.'; break;
+                case '25':  productType = 'Vestimenta.'; break;
             }
 
 

@@ -25,7 +25,7 @@ $iva10 = 0;
         <div id="areaImprimir">
         <center>
             <h3>SIC - Logistica</h3>
-            <p>Asuncion</p>
+            <p>Asunción</p>
             <p>SIC Logistica S.A.</p>
             <p><b>RUC: </b>8004456-4</p>
             <p>Mcal. Lopez casi Madame Lynch </p>
@@ -55,7 +55,7 @@ $iva10 = 0;
             </tr>
             <tr>
                 <td>Factura N°</td>
-                <td><?php echo $Pedido->NumFac; ?></td>
+                <td><?php echo number_format($Pedido->NumFac); ?></td>
             </tr>
             <tr>
                 <td>Fecha</td>
@@ -78,7 +78,7 @@ $iva10 = 0;
 
         <br>
 
-        <table class="w-100">
+        <table class="w-100" border="1">
             <thead>
                 <th>Descripcion</th>
                 <th>Tipo</th>
@@ -108,7 +108,7 @@ $iva10 = 0;
         <table class="w-100">
             <tr>
                 <td><b>Total a Pagar</b></td>
-                <td><?php echo number_format($fMonto); ?> GS.</td>
+                <td><b><?php echo number_format($fMonto); ?> GS.</b></td>
             </tr>
             <tr>
                 <td colspan="2">Detalle de total</td>

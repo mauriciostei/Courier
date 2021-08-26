@@ -61,7 +61,14 @@
 
             <div class="row" style="margin-left:1%; margin-right: 1%; padding: 1%;">
                 <div class="col">
-                    <h4><?php echo $module; ?></h4>
+                    <h4>
+                        <?php 
+                            switch($module){
+                                case 'Det_Envios': echo 'Detalle del Envio'; break;
+                                default: echo $module;
+                            };
+                        ?>
+                    </h4>
                 </div>
                 <div class="col">
                     <button class="btn btn-primary btn-outline-primary float-right" onclick="window.location.href='<?php echo $path; ?>Usuarios/Close'">Cerrar Sistema</button>
