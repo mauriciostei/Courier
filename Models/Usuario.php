@@ -35,7 +35,7 @@ class Usuario{
         return $db->getWhere(Array(
             "User = '{$this->User}'"
             ,"Password = '{$this->Password}'"
-            ,"Active = 1"
+            //,"Active = 1"
         ));
     }
 

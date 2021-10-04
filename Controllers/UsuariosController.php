@@ -64,7 +64,13 @@ class UsuariosController implements BaseController{
         $user = $this->usuarios->validateUser();
         if(isset($user) && $user != []){
             foreach($user as $u):
-                $_SESSION["user_id"] = serialize($u);
+                if($u->Active){
+                    $_SESSION["user_id"] = serialize($u);
+                }else{
+                    $_SESSION['mensaje'] = Array("alert-danger","Usuario inactivo");
+                    header("Location: Login");
+                    exit;
+                }
             endforeach;
             unset($_SESSION['mensaje']);
             header("Location: ../Inicio");
