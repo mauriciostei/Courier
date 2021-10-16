@@ -4,6 +4,7 @@ RewriteRule ^([A-Za-z0-9-]+)?$ Index.php?controller=$1 [QSA,L] #Index Directo no
 RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/edit Index.php?controller=$1&action=edit&id=$2 [QSA,L] #vista de edicion 
 RewriteRule ^([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/create Index.php?controller=$1&action=edit&id=$2 [QSA,L] #vista de creacion 
 RewriteRule ^([A-Za-z0-9-]+)/store Index.php?controller=$1&action=store [QSA,L] #Almacena el dato en la base
+RewriteRule ^([A-Za-z0-9-]+)/Reporte Index.php?controller=$1&action=Reporte [QSA,L] #Vista para los reportes
 
 RewriteRule ^Usuarios/Login Index.php?controller=Usuarios&action=loginForm [QSA,L] #Muestra form de inicio de seccion
 RewriteRule ^Usuarios/validate Index.php?controller=Usuarios&action=validate [QSA,L] #Validar la seccion ingresada

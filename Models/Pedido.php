@@ -20,6 +20,14 @@ class Pedido{
         return $db->fullList();
     }
 
+    function report($ini, $fin){
+        $ini = is_null($ini) ? 'null' : "'".$ini."'";
+        $fin = is_null($fin) ? 'null' : "'".$fin."'";
+
+        $db = new DataBase('pedidos', __CLASS__);
+        return $db->getWhere(array("fecha between $ini and $fin"));
+    }
+
     function find(){
         $db = new DataBase('pedidos', __CLASS__);
         return $this->id>0 ? $db->getById($this->id) : $this;

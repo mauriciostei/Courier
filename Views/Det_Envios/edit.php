@@ -44,6 +44,8 @@
         <?php endforeach; ?>
     </table>
 
+    <a href="../../Inicio" class="form-control btn btn-primary btn-outline-primary">Volver</a>
+
     <hr>
 
     <form action="../../DetEnvios/store" method="POST" onsubmit="return confirm('Seguro de marcar punto?');">

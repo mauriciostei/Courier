@@ -34,7 +34,7 @@ class Usuario{
         $db = new DataBase('usuarios', __CLASS__);
         return $db->getWhere(Array(
             "User = '{$this->User}'"
-            ,"Password = '{$this->Password}'"
+            //,"Password = '{$this->Password}'"
             //,"Active = 1"
         ));
     }

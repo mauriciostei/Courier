@@ -64,7 +64,7 @@ class UsuariosController implements BaseController{
         $user = $this->usuarios->validateUser();
         if(isset($user) && $user != []){
             foreach($user as $u):
-                if($u->Active){
+                if($u->Active && $u->Password==$this->usuarios->Password){
                     $_SESSION["user_id"] = serialize($u);
                 }else{
                     $_SESSION['mensaje'] = Array("alert-danger","Usuario inactivo");

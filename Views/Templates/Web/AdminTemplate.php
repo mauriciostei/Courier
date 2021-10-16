@@ -8,6 +8,8 @@
         <!-- Logo en navegador -->
         <link rel="icon" type="image/png" sizes="96x96" href="<?php echo $path; ?>Public/img/Logo.png" >
 
+        <script src="<?php echo $path.'Public/src/Excel.js'; ?>"></script>
+
         <!-- Iconos -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 

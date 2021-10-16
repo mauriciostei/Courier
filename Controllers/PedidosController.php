@@ -119,4 +119,17 @@ class PedidosController implements BaseController{
         //header("Location: ../Inicio");
         die();
     }
+
+    function Reporte(){
+        @new Views('Pedidos/Reporte', array(
+            'Pedido' => $this->pedidos->report($_REQUEST["fechaIni"], $_REQUEST["fechaFin"])
+            ,'Timbrado' => new Timbrado()
+            ,'Cliente' => new Cliente()
+            ,'det_pedido' => new det_pedido()
+            ,'data' => array(
+                'fechaIni' => $_REQUEST["fechaIni"]
+                ,'fechaFin' => $_REQUEST["fechaFin"]
+            )
+        ));
+    }
 }

@@ -17,6 +17,9 @@ spl_autoload_register(function($clase){
 
 //echo json_encode(unserialize($_SESSION["user_id"]));
 
+define("MOVIL", preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini
+|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]));
+
 $control = 'Controllers\\'.$controller.'Controller';
 $control = new $control($id);
 call_user_func(array($control, $action));

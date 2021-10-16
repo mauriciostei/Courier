@@ -2,6 +2,7 @@
 
 <?php $db = new DataBase('', null); ?>
 
+<?php if(!MOVIL){ ?>
 <div class="row">
     <div class="col"> </div>
     <div class="col">
@@ -61,7 +62,14 @@
 </div>
 
 <br>
-<hr>
+
+<center>
+    <a href="Pedidos/Reporte">Reportes</a>
+</center>
+
+<?php } ?>
+
+<?php if(MOVIL){ ?>
 
 <?php $res = $db->getSQL("SELECT * FROM usuarios_x_perfiles WHERE Perfiles_id=3 AND Usuarios_id=".unserialize($_SESSION["user_id"])->id); ?>
 <?php if($res!=[]){ ?>
@@ -109,4 +117,4 @@
             <br>
         <?php } ?>
     <?php endforeach; ?>
-<?php } ?>
+<?php }} ?>

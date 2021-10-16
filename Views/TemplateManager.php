@@ -27,6 +27,7 @@ class TemplateManager{
         //, 'Pedidos/list' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Pedidos/edit' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Pedidos/print' => 'Views/Templates/Web/AdminTemplate.php'
+        , 'Pedidos/Reporte' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Pedidos/takeOut' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Clientes/list' => 'Views/Templates/Web/AdminTemplate.php'
         , 'Clientes/edit' => 'Views/Templates/Web/AdminTemplate.php'
@@ -48,12 +49,8 @@ class TemplateManager{
     );
 
     public function getTemplate($view){
-        $movil = preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini
-        |mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
-
-
         if(array_key_exists($view, $this->templatesWeb)){
-            if($movil==0){
+            if(!MOVIL){
                 return $this->templatesWeb[$view];
             }else{
                 return $this->templatesMovil[$view];
